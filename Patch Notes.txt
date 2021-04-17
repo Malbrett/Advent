@@ -1,0 +1,5 @@
+Daily log:
+4/17/2020
+	- Revamped "help" command
+	- Renamed "inspect" to "use"
+	- Started work on "use" command

@@ -1,0 +1,14 @@
+﻿'Advent.exe' (Win32): Loaded 'C:\Users\Benjamin Hagerty\source\repos\Advent\Debug\Advent.exe'. Symbols loaded.
+'Advent.exe' (Win32): Loaded 'C:\Windows\SysWOW64\ntdll.dll'. 
+'Advent.exe' (Win32): Loaded 'C:\Windows\SysWOW64\kernel32.dll'. 
+'Advent.exe' (Win32): Loaded 'C:\Windows\SysWOW64\KernelBase.dll'. 
+'Advent.exe' (Win32): Loaded 'C:\Windows\SysWOW64\msvcp140d.dll'. 
+'Advent.exe' (Win32): Loaded 'C:\Windows\SysWOW64\vcruntime140d.dll'. 
+'Advent.exe' (Win32): Loaded 'C:\Windows\SysWOW64\ucrtbased.dll'. 
+'Advent.exe' (Win32): Loaded 'C:\Windows\SysWOW64\ucrtbased.dll'. 
+'Advent.exe' (Win32): Unloaded 'C:\Windows\SysWOW64\ucrtbased.dll'
+'Advent.exe' (Win32): Loaded 'C:\Windows\SysWOW64\vcruntime140d.dll'. 
+'Advent.exe' (Win32): Unloaded 'C:\Windows\SysWOW64\vcruntime140d.dll'
+The thread 0x3cfc has exited with code 0 (0x0).
+The thread 0x2c48 has exited with code 0 (0x0).
+The thread 0x2e4c has exited with code 0 (0x0).

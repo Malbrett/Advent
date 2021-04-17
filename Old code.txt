@@ -1,0 +1,73 @@
+Old code :(
+
+string verbs[6][5] = { 
+	{ "inspect", "look", "check", "search", "examine" }, 
+	{ "interact", "touch", "feel", "push", "open" },
+	{ "move", "walk", "run", "go", "leave" },
+	{ "talk", "call", "ask", "speak", "seduce" },
+	{ "attack", "kick", "break", "shove", "hit" },
+	{ "sneak", "pick", "pickpocket", "hide", "fuck" }
+};
+
+int actionNum;														//This is used for keeping track of which list we on
+	for (int i = 0; i < 6; i++) {											//Check each core command list...
+		actionNum = i;													//We on this list
+		for (int i = 0; i < 5; i++) {										//and each alternate command...
+			if (actionReq.find(verbs[actionNum][i]) != string::npos) {		//and if there's a match...
+				parsedAction = possibleActions[actionNum];					//parse the core command...
+				goto parseFinish;											//and send it
+			}
+		}
+	}
+
+	if (actionReq.find(room.objects[ix]) != string::npos) {	//if the request includes the name of one of the currently defined objects...
+			if (actionReq.find("under") != string::npos) {			//if the request has the keyword "under"...
+				if (room.objectDesc[ix][3].length() > 0) {				//and the object has an "under"...
+					cout << room.objectDesc[ix][3] << endl;					//output the description of what's under it.
+					if (room.inspectEquips[ix][3].length() > 0) {					//If the object is equippable...
+						for (int i = 0; i < 10; i++) {
+							if (Player.inventory[i].length() == 0) {				//find the first open inventory slot...
+								Player.inventory[i] = room.inspectEquips[ix][3];	//and add the item to the inventory.
+								return;
+							}
+						}
+					}
+				}
+				else {
+					cout << "There is nothing underneath." << endl;		//otherwise, say there's nothing under it.
+				}
+				return;												//Skip the rest.
+			}
+
+			if (actionReq.find("inside") != string::npos) {			//if the request has the keyword "inside"...
+				if (room.objectDesc[ix][4].length() > 0) {				//and the object has an "inside"...
+					cout << room.objectDesc[ix][4] << endl;					//output the description of what's inside it.
+					if (room.inspectEquips[ix][4].length() > 0) {					//If the object is equippable...
+						for (int i = 0; i < 10; i++) {
+							if (Player.inventory[i].length() == 0) {				//find the first open inventory slot...
+								Player.inventory[i] = room.inspectEquips[ix][4];	//and add the item to the inventory.
+								return;
+							}
+						}
+					}
+				}
+				else {
+					cout << "There is nothing inside." << endl;			//otherwise, say there's nothing inside it.
+				}
+				return;												//Skip the rest.
+			}
+		}
+
+		if (dead) {
+			cout << "There is a dead " << name << " on the ground." << endl;
+			return;
+		}
+
+		if (type == 0) {
+				cout << "Is kinda sharp and rusty" << endl;
+				cout << damage << " damage" << endl;
+				spacing(0);
+				cout << "Is a door" << endl;
+				cout << (defense * 100) << "% damage resist" << endl;
+		}
+

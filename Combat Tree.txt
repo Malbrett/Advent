@@ -1,0 +1,33 @@
+Combat tree:
+- Heavy Attack
+	- Beats Parry and Feint
+	- Loses to Quick and Dodge
+- Parry
+	- Beats Quick and Dodge
+	- Loses to Heavy and Feint
+- Quick Attack
+	- Beats Feint and Heavy
+	- Loses to Parry and Dodge
+- Feint
+	- Beats Dodge and Parry
+	- Loses to Quick and Heavy
+- Dodge
+	- Beats Heavy and Quick
+	- Loses to Feint and Parry
+
+Flavor text:
+- "The enemy takes half a step back"
+	- Dodge 
+	- Parry
+- "The enemy strengthens their footing"
+	- Parry
+	- Heavy
+- "The enemy readies their weapon"
+	- Parry
+	- Quick
+- "The enemy advances toward you"
+	- Quick
+	- Feint
+- "The enemy draws back their weapon"
+	- Feint
+	- Heavy
